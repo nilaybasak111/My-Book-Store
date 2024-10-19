@@ -1,19 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Login() {
+function Signup() {
   return (
-    <>
-      <div>
-        <dialog id="my_modal_3" className="modal">
-          <div className="modal-box dark:bg-slate-900 dark:text-white">
-            <form method="dialog">
+   <>
+    <div className='flex h-screen items-center justify-center'>
+    <div id="my_modal_3" className="border-[2px] shadow-sm p-4 rounded-md">
+          <div className="dark:bg-slate-900 dark:text-white">
+            <form method="div">
               {/* if there is a button in form, it will close the modal */}
               <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                 ✕
               </button>
             </form>
-            <h3 className="font-bold text-lg">Login</h3>
+            <h3 className="font-bold text-lg">SignUp</h3>
+
+            {/* Name */}
+            <div className="mt-4 space-y-2">
+              <span>Name</span>
+              <br />
+              <input
+                type="text"
+                placeholder="Enter Your Full Name"
+                className="w-80 px-3 py-1 border rounded-md outline-none"
+              />
+            </div>
 
             {/* Email */}
             <div className="mt-4 space-y-2">
@@ -38,26 +49,16 @@ function Login() {
             </div>
 
             {/* Button */}
-            <div className="flex mt-4 sm:items-stretch md:space-x-48">
-              <div>
+            <div className="flex mt-4">
               <button className="bg-pink-500 text-white px-3 py-1 rounded-md hover:bg-pink-700 duration-200 cursor-pointer">
-                Login
+                SignUp
               </button>
-              </div>
-              <div>
-              <p>
-                Not Registered{" "}
-                <span className="underline text-blue-500 cursor-pointer">
-                  <Link to="/signup">Signup</Link>
-                </span>
-              </p>
-              </div>
             </div>
           </div>
-        </dialog>
-      </div>
-    </>
-  );
+        </div>
+    </div>
+   </>
+  )
 }
 
-export default Login;
+export default Signup

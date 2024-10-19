@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar";
 import Course from "./components/Course";
 import Footer from "./components/Footer";
+import Signup from "./components/Signup";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/course" element={<Course />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       </main>
       <Footer />
@@ -24,4 +26,4 @@ export default function App() {
   );
 }
 
-// 1:50:00
+// 2:05:00
